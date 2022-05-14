@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font/Rimouski.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="search-container">
+            <input type="text" id="input" placeholder="Search a State/City">
+            <span><button id="find" onclick="getWeather()">Find</button></span>
+        </div>
+
+        <div id="result-container" class="result-container">
+            <p class="title">Weather</p>
+            <div id="notification" class="notification">Please search a valid State/City</div>
+
+            <div class="weather-container">
+                <img id="icon" class="icon" src="icons/unknown.png">
+                <p id="temperature" class="temperature">?? ??</p>
+                <p id="temperature-description" class="temperature-description">Search a State/City</p>
+                <div class="tempAndWind">
+                    <div class="minMaxDiv">
+                        <p id="minTemp">???</p>
+                        <p id="maxTemp">???</p>
+                    </div>
+                    <div class="wind">
+                        <img id='windicon' src="icons/windIcon.png" alt="">
+                        <p id="windSpeed">???</p>
+                    </div>
+                </div>
+
+                <p id="location" class="location">Unknown</p>
+            </div>
+        </div>
+
+        <div class="tipAndCopy">
+            <p id="tip" title="Double click to hide the tip" ondblclick="hideTip()">Click the Temperature to change the
+                unit</p>
+            <h4><br>&copy D.H - 2021</h4>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
